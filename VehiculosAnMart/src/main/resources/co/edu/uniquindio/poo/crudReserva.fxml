@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.MainViewController">
+   <children>
+      <SplitPane dividerPositions="0.5384615384615384" orientation="VERTICAL" prefHeight="613.0" prefWidth="708.0">
+        <items>
+          <AnchorPane blendMode="GREEN" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="686.0">
+              <children>
+                 <Label blendMode="GREEN" layoutX="297.0" layoutY="14.0" text="Crud Reserva">
+                    <font>
+                       <Font name="System Bold" size="18.0" />
+                    </font>
+                 </Label>
+                 <DatePicker fx:id="fechaInicioPicker" blendMode="GREEN" layoutX="342.0" layoutY="57.0" prefHeight="31.0" prefWidth="218.0" />
+                 <DatePicker fx:id="fechaFinPicker" blendMode="GREEN" layoutX="342.0" layoutY="99.0" prefHeight="31.0" prefWidth="218.0" />
+                 <Label layoutX="172.0" layoutY="59.0" prefHeight="27.0" prefWidth="94.0" text="Fecha Inicio">
+                    <font>
+                       <Font name="Serif Regular" size="18.0" />
+                    </font>
+                 </Label>
+                 <Label layoutX="182.0" layoutY="99.0" prefHeight="31.0" prefWidth="74.0" text="Fecha Fin" textFill="#a30895">
+                    <font>
+                       <Font name="Serif Regular" size="18.0" />
+                    </font>
+                 </Label>
+                 <ChoiceBox fx:id="clienteChoiceBox" blendMode="GREEN" layoutX="342.0" layoutY="148.0" prefHeight="31.0" prefWidth="218.0" />
+                 <ChoiceBox fx:id="vehiculoChoiceBox" blendMode="GREEN" layoutX="342.0" layoutY="196.0" prefHeight="31.0" prefWidth="218.0" />
+                 <TextField fx:id="costoTextField" blendMode="GREEN" layoutX="78.0" layoutY="255.0" prefHeight="31.0" prefWidth="218.0" />
+                 <Label layoutX="187.0" layoutY="150.0" prefHeight="27.0" prefWidth="65.0" text="Clientes" textFill="#a30895">
+                    <font>
+                       <Font name="Serif Regular" size="18.0" />
+                    </font>
+                 </Label>
+                 <Label layoutX="178.0" layoutY="198.0" prefHeight="27.0" prefWidth="83.0" text="Vehiculos" textAlignment="JUSTIFY" textFill="#a30895">
+                    <font>
+                       <Font name="Serif Regular" size="18.0" />
+                    </font>
+                 </Label>
+                 <Button layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#calcularCosto" prefHeight="31.0" prefWidth="218.0" text="Calcular Costo" textFill="#a30895">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font></Button>
+              </children>
+           </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                 <TableView fx:id="reservasTable" blendMode="GREEN" prefHeight="213.0" prefWidth="708.0">
+                    <columns>
+                       <TableColumn fx:id="colFechaInicio" prefWidth="74.0" text="Fecha Inicio" />
+                       <TableColumn fx:id="colFechaFin" prefWidth="65.0" text="Fecha Fin" />
+                       <TableColumn fx:id="colCliente" prefWidth="59.0" text="Cliente" />
+                       <TableColumn fx:id="colVehiculo" prefWidth="60.0" text="Vehiculo" />
+                       <TableColumn fx:id="colCosto" prefWidth="100.0" text="Costo Calculado" />
+                        <TableColumn fx:id="colFechaInicio1" prefWidth="116.0" text="Numero Matricula" />
+                    </columns>
+                 </TableView>
+                 <Button blendMode="GREEN" layoutX="27.0" layoutY="224.0" mnemonicParsing="false" onAction="#eliminarReserva" prefHeight="31.0" prefWidth="147.0" text="Eliminar" textFill="#a30895">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font></Button>
+                 <Button blendMode="GREEN" layoutX="519.0" layoutY="224.0" mnemonicParsing="false" onAction="#limpiarFormulario" prefHeight="31.0" prefWidth="147.0" text="Limpiar" textFill="#a30895">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font></Button>
+                 <Button blendMode="GREEN" layoutX="280.0" layoutY="224.0" mnemonicParsing="false" onAction="#guardarReserva" prefHeight="31.0" prefWidth="147.0" text="Guardar" textFill="#a30895">
+                     <font>
+                        <Font name="Serif Regular" size="18.0" />
+                     </font></Button>
+              </children>
+           </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
