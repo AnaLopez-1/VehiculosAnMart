@@ -52,6 +52,8 @@ public abstract class Vehiculo {
         this.añoDeFabricacion = añoDeFabricacion;
     }
     public abstract double calculoDecostoReserva();
+
+    
     @Override
     public String toString() {
         return "vehiculo [numeroDeMatricula=" + numeroDeMatricula + ", modelo=" + modelo + ", marca=" + marca

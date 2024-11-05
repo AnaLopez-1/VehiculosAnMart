@@ -35,7 +35,7 @@ public class MainViewController {
 
         // Asignar lista predeterminada de clientes y vehículos
         clienteChoiceBox.setItems(FXCollections.observableArrayList("Maritza Calderon", "Ana López", "Luisa Londoño"));
-        vehiculoChoiceBox.setItems(FXCollections.observableArrayList("Auto", "Moto", "Camioneta"));
+        vehiculoChoiceBox.setItems(FXCollections.observableArrayList("Auto", "Moto-Automática", "Camioneta"));
 
         // Asignar la lista de reservas a la tabla
         reservasTable.setItems(reservasList);
@@ -60,7 +60,7 @@ public class MainViewController {
 
         // Calcular el costo de la reserva
         double costo = calcularCostoReserva(vehiculo, fechaInicio, fechaFin);
-        costoTextField.setText(String.format("%.2f", costo));
+        costoTextField.setText(String.format("%.3f", costo));
     }
 
     private double calcularCostoReserva(String vehiculo, LocalDate fechaInicio, LocalDate fechaFin) {
@@ -72,7 +72,7 @@ public class MainViewController {
         if (vehiculo.contains("Moto")) {
             costo += 10.000; // Tarifa adicional para motos
         } else if (vehiculo.contains("Camioneta")) {
-            costo += 1 * costo; // Aumento por carga para camionetas
+            costo += 100 * costo; // Aumento por carga para camionetas
         }
 
         return costo;

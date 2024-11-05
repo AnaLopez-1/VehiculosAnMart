@@ -53,12 +53,11 @@
               <children>
                  <TableView fx:id="reservasTable" blendMode="GREEN" prefHeight="213.0" prefWidth="708.0">
                     <columns>
-                       <TableColumn fx:id="colFechaInicio" prefWidth="74.0" text="Fecha Inicio" />
-                       <TableColumn fx:id="colFechaFin" prefWidth="65.0" text="Fecha Fin" />
-                       <TableColumn fx:id="colCliente" prefWidth="59.0" text="Cliente" />
-                       <TableColumn fx:id="colVehiculo" prefWidth="60.0" text="Vehiculo" />
-                       <TableColumn fx:id="colCosto" prefWidth="100.0" text="Costo Calculado" />
-                        <TableColumn fx:id="colFechaInicio1" prefWidth="116.0" text="Numero Matricula" />
+                       <TableColumn fx:id="colFechaInicio" prefWidth="110.0" text="Fecha Inicio" />
+                       <TableColumn fx:id="colFechaFin" prefWidth="115.0" text="Fecha Fin" />
+                       <TableColumn fx:id="colCliente" prefWidth="123.0" text="Cliente" />
+                       <TableColumn fx:id="colVehiculo" prefWidth="134.0" text="Vehiculo" />
+                       <TableColumn fx:id="colCosto" prefWidth="162.0" text="Costo Calculado" />
                     </columns>
                  </TableView>
                  <Button blendMode="GREEN" layoutX="27.0" layoutY="224.0" mnemonicParsing="false" onAction="#eliminarReserva" prefHeight="31.0" prefWidth="147.0" text="Eliminar" textFill="#a30895">

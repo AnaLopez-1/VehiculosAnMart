@@ -28,7 +28,7 @@ public class ConfirmacionViewController {
         fechaFinPicker.setValue(fechaFin);
         clienteChoiceBox.setValue(cliente);
         vehiculoChoiceBox.setValue(vehiculo);
-        costoTextField.setText(String.format("%.2f", costo));
+        costoTextField.setText(String.format("%.3f", costo));
     }
 
     // Método para confirmar la generación de la reserva
